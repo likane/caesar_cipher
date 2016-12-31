@@ -1,0 +1,22 @@
+{
+  "name": "caesar_cipher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "caesarCypher.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/likane/caesar_cipher.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/likane/caesar_cipher/issues"
+  },
+  "homepage": "https://github.com/likane/caesar_cipher#readme",
+  "dependencies": {
+    "inquirer": "^2.0.0"
+  }
+}
