@@ -24,7 +24,7 @@ inquirer.prompt([
 
 		if (encrypted.key < 0){
 			console.log("cypher key is negative");
-			reverseEncryption();
+			reverseEncryption(encrypted);
 
 		} else {
 
@@ -49,11 +49,14 @@ inquirer.prompt([
 			}
 
 		console.log(newMessage);
+	}).catch(function(err){
+
+		console.log("error");
 	});
 
 	
 
-	var reverseEncryption = function() {
+	var reverseEncryption = function(encrypted) {
 
 		var reverseMessage = "";
 
@@ -74,5 +77,5 @@ inquirer.prompt([
 		
 	}
 console.log(reverseMessage);
-}
+};
 
