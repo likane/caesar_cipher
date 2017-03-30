@@ -59,20 +59,35 @@ inquirer.prompt([
 	var reverseEncryption = function(encrypted) {
 
 		var reverseMessage = "";
+		console.log("reverseEncryption reached");
+		//console.log(encrypted);
 
 		for (var i = 0; i<encrypted.message.length; i++) {
+			//console.log("in for loop=======")
 				
 				var reverseKey = encrypted.message[i];
 
+				//console.log(reverseKey);
+
 				//if (newKey.match(/[a-z]/i)){
 					var reverseCode = encrypted.message.charCodeAt(i);
+					//debugger;
 
 					if ((reverseCode >= 65) && (reverseCode <= 90)) {
-						reverseKey = String.fromCharCode(((reverseCode -65 + (encrypted.key + 26 )) % 26) + 65);
+						reverseKey = String.fromCharCode(((reverseCode - 65 + (encrypted.key + 26 )) % 26) + 65);
+						console.log(reverseKey);
+						console.log(reverseCode);
+						console.log(encrypted.key);
 					} else if ((reverseCode >= 97) && (reverseCode <= 122)) {
 						reverseKey = String.fromCharCode(((reverseCode - 97 + (encrypted.key + 26 )) % 26) + 97);
+						console.log("reverserkey !!!!" + reverseKey);
+						console.log("reverserCode !!!!" +reverseCode);
+						console.log("encrypted.key !!!!" + encrypted.key);
 					}
+					//console.log(reverseKey);
+
 			reverseMessage += reverseKey;
+
 
 		
 	}
